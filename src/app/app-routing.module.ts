@@ -8,6 +8,9 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'cards', component: CardsComponent },
+  { path: 'forms',
+    loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule)
+  },
   wildcardRoute
 ];
 
