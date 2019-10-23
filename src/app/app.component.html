@@ -27,7 +27,7 @@
   <!-- sidebar-->
   <aside class="sidebar-container">
     <div class="sidebar-header">
-      <div class="pull-right pt-lg text-muted hidden"><em class="ion-close-round"></em></div><a href="#"
+      <div class="pull-right pt-lg text-muted hidden"><em class="ion-close-round"></em></div><a [routerLink]="['/']"
          class="sidebar-header-logo"><img src="assets/img/logo.png" data-svg-replace="assets/img/logo.svg"
              alt="Logo"><span class="sidebar-header-logo-text">Centric</span></a>
     </div>
@@ -38,11 +38,11 @@
       </div>
       <nav class="sidebar-nav">
         <ul>
-          <li><a href="dashboard.html" class="ripple"><span class="pull-right nav-label"><span
+          <li routerLinkActive="active"><a routerLink="/dashboard" class="ripple"><span class="pull-right nav-label"><span
                       class="badge bg-success">2</span></span><span class="nav-icon"><img src=""
                      data-svg-replace="assets/img/icons/aperture.svg" alt="MenuItem"
                      class="hidden"></span><span>Dashboard</span></a></li>
-          <li><a href="cards.html" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img
+          <li routerLinkActive="active"><a routerLink="/cards" class="ripple"><span class="pull-right nav-label"></span><span class="nav-icon"><img
                      src="" data-svg-replace="assets/img/icons/radio-waves.svg" alt="MenuItem"
                      class="hidden"></span><span>Cards</span></a></li>
           <li><a href="#" class="ripple"><span class="pull-right nav-caret"><em
