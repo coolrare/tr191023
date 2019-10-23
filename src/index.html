@@ -1,13 +1,158 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Tr191023</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bootstrap Admin Template">
+  <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+  <title>Centric - Bootstrap Admin Template</title>
+  <!-- Vendor styles-->
+  <!-- build:css(../app) css/vendor.css-->
+  <!-- Animate.CSS-->
+  <link rel="stylesheet" href="assets/vendor/animate.css/animate.css">
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Ionicons-->
+  <link rel="stylesheet" href="assets/vendor/ionicons/css/ionicons.css">
+  <!-- Bluimp Gallery-->
+  <link rel="stylesheet" href="assets/vendor/blueimp-gallery/css/blueimp-gallery.css">
+  <link rel="stylesheet" href="assets/vendor/blueimp-gallery/css/blueimp-gallery-indicator.css">
+  <link rel="stylesheet" href="assets/vendor/blueimp-gallery/css/blueimp-gallery-video.css">
+  <!-- Datepicker-->
+  <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
+  <!-- Rickshaw-->
+  <link rel="stylesheet" href="assets/vendor/rickshaw/rickshaw.css">
+  <!-- Select2-->
+  <link rel="stylesheet" href="assets/vendor/select2/dist/css/select2.css">
+  <!-- Clockpicker-->
+  <link rel="stylesheet" href="assets/vendor/clockpicker/dist/bootstrap-clockpicker.css">
+  <!-- Range Slider-->
+  <link rel="stylesheet" href="assets/vendor/nouislider/distribute/nouislider.min.css">
+  <!-- ColorPicker-->
+  <link rel="stylesheet" href="assets/vendor/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css">
+  <!-- Summernote-->
+  <link rel="stylesheet" href="assets/vendor/summernote/dist/summernote.css">
+  <!-- Dropzone-->
+  <link rel="stylesheet" href="assets/vendor/dropzone/dist/basic.css">
+  <link rel="stylesheet" href="assets/vendor/dropzone/dist/dropzone.css">
+  <!-- Xeditable-->
+  <link rel="stylesheet" href="assets/vendor/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css">
+  <!-- Bootgrid-->
+  <link rel="stylesheet" href="assets/vendor/jquery.bootgrid/dist/jquery.bootgrid.css">
+  <!-- Datatables-->
+  <link rel="stylesheet" href="assets/vendor/datatables/media/css/jquery.dataTables.css">
+  <!-- Sweet Alert-->
+  <link rel="stylesheet" href="assets/vendor/sweetalert/dist/sweetalert.css">
+  <!-- Loaders.CSS-->
+  <link rel="stylesheet" href="assets/vendor/loaders.css/loaders.css">
+  <!-- Material Floating Button-->
+  <link rel="stylesheet" href="assets/vendor/ng-material-floating-button/mfb/dist/mfb.css">
+  <!-- Material Colors-->
+  <link rel="stylesheet" href="assets/vendor/material-colors/dist/colors.css">
+  <!-- endbuild-->
+  <!-- Application styles-->
+  <link rel="stylesheet" href="assets/css/app.css">
 </head>
-<body>
+<body class="theme-1">
   <app-root></app-root>
+
+    <!-- Google Maps API-->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyD_MleSHludEfiKUi1CCyumkv74Pm4u8Is"></script>
+    <!-- build:js(../app) js/vendor.js-->
+    <!-- Modernizr-->
+    <script src="assets/vendor/modernizr/modernizr.custom.js"></script>
+    <!-- jQuery-->
+    <script src="assets/vendor/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap-->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- jQuery Browser-->
+    <script src="assets/vendor/jquery.browser/dist/jquery.browser.js"></script>
+    <!-- Material Colors-->
+    <script src="assets/vendor/material-colors/dist/colors.js"></script>
+    <!-- Bootstrap Filestyle-->
+    <script src="assets/vendor/bootstrap-filestyle/src/bootstrap-filestyle.js"></script>
+    <!-- Flot charts-->
+    <script src="assets/vendor/flot/jquery.flot.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.categories.js"></script>
+    <script src="assets/vendor/flot-spline/js/jquery.flot.spline.js"></script>
+    <script src="assets/vendor/flot.tooltip/js/jquery.flot.tooltip.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.resize.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.pie.js"></script>
+    <script src="assets/vendor/flot/jquery.flot.time.js"></script>
+    <script src="assets/vendor/sidebysideimproved/jquery.flot.orderBars.js"></script>
+    <!-- jVector Maps-->
+    <script src="assets/vendor/ika.jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/vendor/ika.jvectormap/jquery-jvectormap-us-mill-en.js"></script>
+    <script src="assets/vendor/ika.jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- Easypie Charts-->
+    <script src="assets/vendor/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+    <!-- Screenfull-->
+    <script src="assets/vendor/screenfull/dist/screenfull.js"></script>
+    <!-- Sparkline-->
+    <script src="assets/vendor/sparkline/index.js"></script>
+    <!-- Datepicker-->
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <!-- jQuery Knob charts-->
+    <script src="assets/vendor/jquery-knob/js/jquery.knob.js"></script>
+    <!-- Rickshaw-->
+    <script src="assets/vendor/d3/d3.js"></script>
+    <script src="assets/vendor/rickshaw/rickshaw.js"></script>
+    <!-- jQuery Form Validation-->
+    <script src="assets/vendor/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="assets/vendor/jquery-validation/dist/additional-methods.js"></script>
+    <!-- JQUERY STEPS-->
+    <script src="assets/vendor/jquery.steps/build/jquery.steps.js"></script>
+    <!-- Select2-->
+    <script src="assets/vendor/select2/dist/js/select2.js"></script>
+    <!-- Clockpicker-->
+    <script src="assets/vendor/clockpicker/dist/bootstrap-clockpicker.js"></script>
+    <!-- Range Slider-->
+    <script src="assets/vendor/nouislider/distribute/nouislider.js"></script>
+    <!-- ColorPicker-->
+    <script src="assets/vendor/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+    <!-- Summernote-->
+    <script src="assets/vendor/summernote/dist/summernote.js"></script>
+    <!-- Dropzone-->
+    <script src="assets/vendor/dropzone/dist/dropzone.js"></script>
+    <!-- Xeditable-->
+    <script src="assets/vendor/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <!-- Momentjs-->
+    <script src="assets/vendor/moment/min/moment-with-locales.js"></script>
+    <!-- Google Maps-->
+    <script src="assets/vendor/gmaps/gmaps.js"></script>
+    <!-- Bootgrid-->
+    <script src="assets/vendor/jquery.bootgrid/dist/jquery.bootgrid.js"></script>
+    <script src="assets/vendor/jquery.bootgrid/dist/jquery.bootgrid.fa.js"></script>
+    <!-- Datatables-->
+    <script src="assets/vendor/datatables/media/js/jquery.dataTables.js"></script>
+    <!-- Nestable-->
+    <script src="assets/vendor/nestable/jquery.nestable.js"></script>
+    <!-- Sweet Alert-->
+    <script src="assets/vendor/sweetalert/dist/sweetalert-dev.js"></script>
+    <!-- Masonry-->
+    <script src="assets/vendor/masonry/dist/masonry.pkgd.js"></script>
+    <!-- Images Loaded-->
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.js"></script>
+    <!-- Loaders.CSS-->
+    <script src="assets/vendor/loaders.css/loaders.css.js"></script>
+    <!-- jQuery Localize-->
+    <script src="assets/vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+    <!-- Blueimp Gallery-->
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-helper.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-gallery.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-gallery-fullscreen.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-gallery-indicator.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-gallery-video.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-gallery-vimeo.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/blueimp-gallery-youtube.js"></script>
+    <script src="assets/vendor/blueimp-gallery/js/jquery.blueimp-gallery.js"></script>
+    <!-- Datamaps-->
+    <script src="assets/vendor/topojson/topojson.min.js"></script>
+    <script src="assets/vendor/datamaps/dist/datamaps.all.js"></script>
+    <!-- endbuild-->
+    <!-- App script-->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
