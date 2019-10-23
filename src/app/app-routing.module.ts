@@ -13,7 +13,8 @@ const routes: Routes = [
     path: 'forms',
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'classic' },
-      { path: 'classic', component: ClassicComponent }
+      { path: 'classic', component: ClassicComponent },
+      { path: 'classic/:id', component: ClassicComponent }
     ]
   },
   wildcardRoute
