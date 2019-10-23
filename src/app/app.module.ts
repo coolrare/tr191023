@@ -6,15 +6,13 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CardsComponent } from './cards/cards.component';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
-import { ClassicComponent } from './forms/classic/classic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     CardsComponent,
-    PathNotFoundComponent,
-    ClassicComponent
+    PathNotFoundComponent
   ],
   imports: [
     BrowserModule,
