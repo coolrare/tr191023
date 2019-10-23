@@ -5,10 +5,11 @@ import { CardsComponent } from './cards/cards.component';
 import { wildcardRoute } from './shared/wildcardRoute';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '',      component: LayoutComponent,
+  { path: '',      component: LayoutComponent, canActivate: [AuthGuard],
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', component: DashboardComponent },
