@@ -4,29 +4,32 @@
     <p class="mb-lg">Standard Bootstrap form and input controls with customized UI variations</p>
     <div class="card">
       <div class="card-body">
-        <form method="get" action="/" class="form-horizontal">
+        <form method="get" action="/" class="form-horizontal" [formGroup]="form">
           <fieldset>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Rounded Corners</label>
+              <label class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control rounded">
+                <input type="text" class="form-control rounded"
+                  formControlName="name">
               </div>
             </div>
           </fieldset>
           <fieldset>
             <div class="form-group">
-              <label class="col-sm-2 control-label">With help</label>
+              <label class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control"><span class="help-block">A block of help text that breaks onto a
+                <input type="text" class="form-control"
+                  formControlName="email"><span class="help-block">A block of help text that breaks onto a
                   new line and may extend beyond one line.</span>
               </div>
             </div>
           </fieldset>
           <fieldset>
             <div class="form-group">
-              <label for="input-id-1" class="col-sm-2 control-label">Label focus</label>
+              <label for="input-id-1" class="col-sm-2 control-label">Tel</label>
               <div class="col-sm-10">
-                <input id="input-id-1" type="text" class="form-control">
+                <input id="input-id-1" type="text" class="form-control"
+                  formControlName="tel">
               </div>
             </div>
           </fieldset>
