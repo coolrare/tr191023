@@ -47,4 +47,8 @@ export class ClassicComponent implements OnInit {
     profiles.push(group);
   }
 
+  c(ctlName: string) {
+    return this.form.get(ctlName);
+  }
+
 }

@@ -24,17 +24,17 @@ form.errors = {{form.errors | json}}</pre>
                 <input type="text" class="form-control rounded"
                   formControlName="name" (dblclick)="form.get('name').disable()">
               </div>
-<pre>form.get('name').value = {{form.get('name').value | json}}
-form.get('name').status = {{form.get('name').status}}
-form.get('name').pristine = {{form.get('name').pristine}}
-form.get('name').dirty = {{form.get('name').dirty}}
-form.get('name').enabled = {{form.get('name').enabled}}
-form.get('name').disabled = {{form.get('name').disabled}}
-form.get('name').touched = {{form.get('name').touched}}
-form.get('name').untouched = {{form.get('name').untouched}}
-form.get('name').valid = {{form.get('name').valid}}
-form.get('name').invalid = {{form.get('name').invalid}}
-form.get('name').errors = {{form.get('name').errors | json}}</pre>
+<pre>c('name').value = {{c('name').value | json}}
+c('name').status = {{c('name').status}}
+c('name').pristine = {{c('name').pristine}}
+c('name').dirty = {{c('name').dirty}}
+c('name').enabled = {{c('name').enabled}}
+c('name').disabled = {{c('name').disabled}}
+c('name').touched = {{c('name').touched}}
+c('name').untouched = {{c('name').untouched}}
+c('name').valid = {{c('name').valid}}
+c('name').invalid = {{c('name').invalid}}
+c('name').errors = {{c('name').errors | json}}</pre>
             </div>
           </fieldset>
 
