@@ -10,12 +10,18 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
   login: any = {};
 
+  @ViewChild('tPassword', { static: false }) tPassword: NgModel;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit(): void {
+    // console.log(this.tPassword);
+    // setTimeout(() => {
+    //   this.setDisabled(this.tPassword);
+    // }, 1);
   }
 
   onSubmit(form: NgForm) {

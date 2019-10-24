@@ -53,7 +53,7 @@ tEmail.errors = {{tEmail.errors | json}}</pre>
             </div>
             <div class="mda-form-group float-label mda-input-group">
               <div class="mda-form-control">
-                <input [(ngModel)]="login.password" #tPassword="ngModel" disabled type="password" name="accountPassword" required class="form-control">
+                <input [(ngModel)]="login.password" #tPassword="ngModel" [disabled]="tEmail.invalid" type="password" name="accountPassword" [required]="tEmail.valid" class="form-control">
                 <div *ngIf="tPassword['errors']?.required">請輸入您的登入密碼</div>
                 <div class="mda-form-control-line"></div>
                 <label>Password</label>
