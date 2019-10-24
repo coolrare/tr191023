@@ -8,7 +8,10 @@ import { NgForm, NgModel } from '@angular/forms';
 })
 export class LoginComponent implements OnInit, AfterViewInit {
 
-  login: any = {};
+  login: any = {
+    email: 'user@example.com',
+    password: '123'
+  };
 
   @ViewChild('tPassword', { static: false }) tPassword: NgModel;
 
