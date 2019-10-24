@@ -1,6 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators, AbstractControl, FormControl } from '@angular/forms';
 import { ClassicModel } from 'src/app/entities/classic-model';
+
+function forbidNameValidator(control: FormControl) {
+  const value = control.value;
+  if (value === 'will') {
+    return { forbidName: true };
+  } else {
+    return null;
+  }
+}
+
 
 @Component({
   selector: 'app-classic',
@@ -36,7 +46,8 @@ export class ClassicComponent implements OnInit {
     this.form = this.fb.group({
       name: ['', [
         Validators.required,
-        Validators.minLength(2)
+        Validators.minLength(2),
+        forbidNameValidator
       ]
       ],
 
