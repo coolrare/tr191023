@@ -11,6 +11,20 @@ function forbidNameValidator(control: FormControl) {
   }
 }
 
+function forbidNameAsyncValidator(control: FormControl) {
+  return new Promise((resolve, reject) => {
+     setTimeout(() => {
+      const value = control.value;
+      if (value === 'will') {
+        resolve({ forbidName: true });
+      } else {
+        resolve(null);
+      }
+     }, 2000);
+  });
+}
+
+
 
 @Component({
   selector: 'app-classic',
@@ -45,10 +59,12 @@ export class ClassicComponent implements OnInit {
 
     this.form = this.fb.group({
       name: ['', [
-        Validators.required,
-        Validators.minLength(2),
-        forbidNameValidator
-      ]
+          Validators.required,
+          Validators.minLength(2)
+        ],
+        [
+          forbidNameAsyncValidator
+        ]
       ],
 
       profiles: this.fb.array([
