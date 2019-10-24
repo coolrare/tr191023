@@ -21,29 +21,30 @@ export class ClassicComponent implements OnInit {
         ]
       ],
 
-      group1: this.fb.group({
-
-        email: ['user@example.com', [
-            Validators.required,
-            Validators.email
-          ]
-        ],
-        tel: this.fb.control('0944-444444', [
-          Validators.pattern('\\d{4}-\\d{6}')
-        ]),
-
-      })
-
+      profiles: this.fb.array([
+      ])
     });
+
+    this.addProfile('user1@example.com', '0922-222222');
+    this.addProfile('user2@example.com', '0944-444444');
 
   }
 
-  fillDetails() {
-    var details = this.form.get('details') as FormArray;
+  addProfile(email: string, tel: string) {
+    const profiles = this.form.get('profiles') as FormArray;
 
-    details.push(this.fb.group({
+    const group = this.fb.group({
+      email: [email, [
+          Validators.required,
+          Validators.email
+        ]
+      ],
+      tel: this.fb.control(tel, [
+        Validators.pattern('\\d{4}-\\d{6}')
+      ])
+    });
 
-    }));
+    profiles.push(group);
   }
 
 }
