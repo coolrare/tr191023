@@ -51,7 +51,19 @@ tEmail.invalid = {{tEmail.invalid}}
 tEmail.errors = {{tEmail.errors | json}}</pre>
               </div><span class="mda-input-group-addon"><em class="ion-ios-email-outline icon-lg"></em></span>
             </div>
-            <div class="mda-form-group float-label mda-input-group">
+            <div class="mda-form-group float-label mda-input-group"
+              ngModelGroup="pw" #tPW="ngModelGroup">
+              <label>Email address</label>
+<pre>tPW.value = {{tPW.value | json}}
+tPW.pristine = {{tPW.pristine}}
+tPW.dirty = {{tPW.dirty}}
+tPW.enabled = {{tPW.enabled}}
+tPW.disabled = {{tPW.disabled}}
+tPW.touched = {{tPW.touched}}
+tPW.untouched = {{tPW.untouched}}
+tPW.valid = {{tPW.valid}}
+tPW.invalid = {{tPW.invalid}}
+tPW.errors = {{tPW.errors | json}}</pre>
               <div class="mda-form-control">
                 <input [(ngModel)]="login.password" #tPassword="ngModel" [disabled]="tEmail.invalid" type="password" name="accountPassword" [required]="tEmail.valid" class="form-control">
                 <div *ngIf="tPassword['errors']?.required">請輸入您的登入密碼</div>
