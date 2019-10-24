@@ -4,6 +4,17 @@
     <p class="mb-lg">Standard Bootstrap form and input controls with customized UI variations</p>
     <div class="card">
       <div class="card-body">
+
+<pre>form.value = {{form.value | json}}
+form.pristine = {{form.pristine}}
+form.dirty = {{form.dirty}}
+form.enabled = {{form.enabled}}
+form.disabled = {{form.disabled}}
+form.touched = {{form.touched}}
+form.untouched = {{form.untouched}}
+form.valid = {{form.valid}}
+form.invalid = {{form.invalid}}
+form.errors = {{form.errors | json}}</pre>
         <form method="get" action="/" class="form-horizontal" [formGroup]="form">
           <fieldset>
             <div class="form-group" [class.has-error]="form.get('name').invalid"
@@ -26,27 +37,33 @@ form.get('name').invalid = {{form.get('name').invalid}}
 form.get('name').errors = {{form.get('name').errors | json}}</pre>
             </div>
           </fieldset>
+
+          <div formGroupName="group1">
+
           <fieldset>
-            <div class="form-group" [class.has-error]="form.get('email').invalid">
+            <div class="form-group" [class.has-error]="form.get('group1.email').invalid">
               <label class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control"
                   formControlName="email">
-                  <span class="help-block" *ngIf="form.get('email').invalid && form.get('email')['errors']?.email">請輸入合法的 Email 地址</span>
-<pre>form.get('email').errors = {{form.get('email').errors | json}}</pre>
+                  <span class="help-block" *ngIf="form.get('group1.email').invalid && form.get('group1.email')['errors']?.email">請輸入合法的 Email 地址</span>
+<pre>form.get('group1.email').errors = {{form.get('group1.email').errors | json}}</pre>
               </div>
             </div>
           </fieldset>
           <fieldset>
-            <div class="form-group" [class.has-error]="form.get('tel').invalid">
+            <div class="form-group" [class.has-error]="form.get('group1.tel').invalid">
               <label for="input-id-1" class="col-sm-2 control-label">Tel</label>
               <div class="col-sm-10">
                 <input id="input-id-1" type="text" class="form-control"
                   formControlName="tel">
-<pre>form.get('tel').errors = {{form.get('tel').errors | json}}</pre>
+<pre>form.get('group1.tel').errors = {{form.get('group1.tel').errors | json}}</pre>
               </div>
             </div>
           </fieldset>
+
+          </div>
+
           <fieldset>
             <div class="form-group">
               <label class="col-sm-2 control-label">Password</label>

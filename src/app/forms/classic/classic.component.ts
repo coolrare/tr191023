@@ -20,16 +20,20 @@ export class ClassicComponent implements OnInit {
           Validators.minLength(2)
         ]
       ],
-      email: ['user@example.com', [
-          Validators.required,
-          Validators.email
-        ]
-      ],
-      tel: this.fb.control('0944-444444', [
-        Validators.pattern('\\d{4}-\\d{6}')
-      ]),
-      details: this.fb.array([
-      ])
+
+      group1: this.fb.group({
+
+        email: ['user@example.com', [
+            Validators.required,
+            Validators.email
+          ]
+        ],
+        tel: this.fb.control('0944-444444', [
+          Validators.pattern('\\d{4}-\\d{6}')
+        ]),
+
+      })
+
     });
 
   }
