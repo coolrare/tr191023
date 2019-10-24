@@ -6,13 +6,15 @@
       <div class="card-body">
         <form method="get" action="/" class="form-horizontal" [formGroup]="form">
           <fieldset>
-            <div class="form-group" [class.has-error]="form.get('name').invalid">
+            <div class="form-group" [class.has-error]="form.get('name').invalid"
+              (click)="form.get('name').enable()">
               <label class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control rounded"
-                  formControlName="name">
+                  formControlName="name" (dblclick)="form.get('name').disable()">
               </div>
 <pre>form.get('name').value = {{form.get('name').value | json}}
+form.get('name').status = {{form.get('name').status}}
 form.get('name').pristine = {{form.get('name').pristine}}
 form.get('name').dirty = {{form.get('name').dirty}}
 form.get('name').enabled = {{form.get('name').enabled}}
