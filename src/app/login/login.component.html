@@ -3,7 +3,8 @@
     <div class="container-full">
       <div class="container container-xs"><img src="assets/img/logo.png"
              class="mv-lg block-center img-responsive thumb64">
-        <form id="user-login" class="card b0 form-validate">
+        <form id="user-login" class="card b0 form-validate"
+          (ngSubmit)="onSubmit(form)" #form="ngForm">
           <div class="card-offset pb0">
             <div class="card-offset-item text-right"><a href="signup.html"
                  class="btn-raised btn btn-info btn-circle btn-lg"><em class="ion-person-add"></em></a></div>
@@ -11,6 +12,19 @@
               <div class="btn btn-success btn-circle btn-lg"><em class="ion-checkmark-round"></em></div>
             </div>
           </div>
+
+<pre>form.value = {{form.value | json}}
+form.pristine = {{form.pristine}}
+form.dirty = {{form.dirty}}
+form.enabled = {{form.enabled}}
+form.disabled = {{form.disabled}}
+form.touched = {{form.touched}}
+form.untouched = {{form.untouched}}
+form.valid = {{form.valid}}
+form.invalid = {{form.invalid}}
+form.errors = {{form.errors | json}}
+form.submitted = {{form.submitted}}</pre>
+
           <div class="card-heading">
             <div class="card-title text-center">Login</div>
             <pre>{{login|json}}</pre>
@@ -18,7 +32,11 @@
           <div class="card-body">
             <div class="mda-form-group float-label mda-input-group">
               <div class="mda-form-control">
-                <input [(ngModel)]="login.email" #tEmail="ngModel" type="email" name="accountName" required="" class="form-control">
+                <input [(ngModel)]="login.email" #tEmail="ngModel"
+                  required email minlength="3"
+                  type="email" name="accountName" class="form-control">
+                <div *ngIf="tEmail['errors']?.required">請輸入您的 Email</div>
+                <div *ngIf="tEmail['errors']?.email">請輸入合法的 Email 地址格式</div>
                 <div class="mda-form-control-line"></div>
                 <label>Email address</label>
 <pre>tEmail.value = {{tEmail.value}}
@@ -28,12 +46,15 @@ tEmail.enabled = {{tEmail.enabled}}
 tEmail.disabled = {{tEmail.disabled}}
 tEmail.touched = {{tEmail.touched}}
 tEmail.untouched = {{tEmail.untouched}}
+tEmail.valid = {{tEmail.valid}}
+tEmail.invalid = {{tEmail.invalid}}
 tEmail.errors = {{tEmail.errors | json}}</pre>
               </div><span class="mda-input-group-addon"><em class="ion-ios-email-outline icon-lg"></em></span>
             </div>
             <div class="mda-form-group float-label mda-input-group">
               <div class="mda-form-control">
-                <input [(ngModel)]="login.password" #tPassword="ngModel" type="password" name="accountPassword" required="" class="form-control">
+                <input [(ngModel)]="login.password" #tPassword="ngModel" type="password" name="accountPassword" required class="form-control">
+                <div *ngIf="tPassword['errors']?.required">請輸入您的登入密碼</div>
                 <div class="mda-form-control-line"></div>
                 <label>Password</label>
               </div><span class="mda-input-group-addon"><em class="ion-ios-locked-outline icon-lg"></em></span>
