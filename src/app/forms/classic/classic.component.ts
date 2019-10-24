@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-classic',
@@ -15,9 +15,19 @@ export class ClassicComponent implements OnInit {
   ngOnInit() {
 
     this.form = this.fb.group({
-      name: 'Will',
-      email: 'user@example.com',
-      tel: this.fb.control('0944-444444'),
+      name: ['Will', [
+          Validators.required,
+          Validators.minLength(2)
+        ]
+      ],
+      email: ['user@example.com', [
+          Validators.required,
+          Validators.email
+        ]
+      ],
+      tel: this.fb.control('0944-444444', [
+        Validators.pattern('\\d{4}-\\d{6}')
+      ]),
       details: this.fb.array([
       ])
     });

@@ -6,30 +6,42 @@
       <div class="card-body">
         <form method="get" action="/" class="form-horizontal" [formGroup]="form">
           <fieldset>
-            <div class="form-group">
+            <div class="form-group" [class.has-error]="form.get('name').invalid">
               <label class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control rounded"
                   formControlName="name">
               </div>
+<pre>form.get('name').value = {{form.get('name').value | json}}
+form.get('name').pristine = {{form.get('name').pristine}}
+form.get('name').dirty = {{form.get('name').dirty}}
+form.get('name').enabled = {{form.get('name').enabled}}
+form.get('name').disabled = {{form.get('name').disabled}}
+form.get('name').touched = {{form.get('name').touched}}
+form.get('name').untouched = {{form.get('name').untouched}}
+form.get('name').valid = {{form.get('name').valid}}
+form.get('name').invalid = {{form.get('name').invalid}}
+form.get('name').errors = {{form.get('name').errors | json}}</pre>
             </div>
           </fieldset>
           <fieldset>
-            <div class="form-group">
+            <div class="form-group" [class.has-error]="form.get('email').invalid">
               <label class="col-sm-2 control-label">Email</label>
               <div class="col-sm-10">
                 <input type="text" class="form-control"
-                  formControlName="email"><span class="help-block">A block of help text that breaks onto a
-                  new line and may extend beyond one line.</span>
+                  formControlName="email">
+                  <span class="help-block" *ngIf="form.get('email').invalid && form.get('email')['errors']?.email">請輸入合法的 Email 地址</span>
+<pre>form.get('email').errors = {{form.get('email').errors | json}}</pre>
               </div>
             </div>
           </fieldset>
           <fieldset>
-            <div class="form-group">
+            <div class="form-group" [class.has-error]="form.get('tel').invalid">
               <label for="input-id-1" class="col-sm-2 control-label">Tel</label>
               <div class="col-sm-10">
                 <input id="input-id-1" type="text" class="form-control"
                   formControlName="tel">
+<pre>form.get('tel').errors = {{form.get('tel').errors | json}}</pre>
               </div>
             </div>
           </fieldset>
